@@ -34,7 +34,7 @@ export class File {
 		lines.forEach((line: string, index: number) => {
 			line = line.split('//')[0];
 
-			if (/[а-яА-ЯеЁ]/.test(line)) {
+			if (/[а-яА-ЯёЁ]/.test(line)) {
 				this.errorLines.push(allLines.indexOf(line) + 1);
 			}
 		});
