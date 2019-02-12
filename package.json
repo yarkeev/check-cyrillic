@@ -1,6 +1,6 @@
 {
 	"name": "check-cyrillic",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "check cyrillic symbols in source code",
 	"main": "dist/App.js",
 	"scripts": {
@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@types/commander": "^2.12.2",
 		"@types/glob": "^7.1.1",
-		"@types/node": "^10.5.8",
+		"@types/node": "^11.9.2",
 		"commander": "^2.19.0",
 		"glob": "^7.1.3"
 	}
