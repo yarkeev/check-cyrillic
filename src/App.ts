@@ -40,7 +40,7 @@ export class App extends EventEmitter{
 	}
 
 	async readIgnore() {
-		return new Promise((resolve, reject) => {
+		return new Promise<void>((resolve, reject) => {
 			const pathToIgnore = '.check-cyrillic-ignore';
 
 			if (fs.existsSync(pathToIgnore)) {
@@ -60,7 +60,7 @@ export class App extends EventEmitter{
 	}
 
 	async readFiles(files: string[]) {
-		return new Promise(async (resolve, reject) => {
+		return new Promise<void>(async (resolve, reject) => {
 			this.files = files
 				.filter((path: string) => this.ignoreFiles.indexOf(path) === -1)
 				.map((path: string) => new File(path));
