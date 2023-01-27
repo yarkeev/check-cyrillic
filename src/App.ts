@@ -48,8 +48,9 @@ export class App extends EventEmitter{
 					if (err) {
 						reject(err);
 					} else {
-						this.ignoreFiles = content.toString().split('\n');
+						const paths = content.toString().split('\n');
 
+						this.ignoreFiles = paths.reduce((prev, current) => [...prev, ...glob.sync(current)], []);
 						resolve();
 					}
 				});
